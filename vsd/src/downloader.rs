@@ -1130,6 +1130,7 @@ impl Keys {
 
                 utils::decrypt_aes_128_cbc(&mut data, &self.bytes, iv.as_ref())?
             }
+            #[cfg(feature = "mp4decrypt")]
             KeyMethod::Cenc => {
                 mp4decrypt::mp4decrypt(&data, self.as_hex_keys(), None).map_err(|x| anyhow!(x))?
             }
