@@ -1,6 +1,6 @@
+use kdam::term::Colorizer;
 use reqwest::blocking::Client;
 use serde::Deserialize;
-use kdam::term::Colorizer;
 
 #[derive(Deserialize)]
 struct Releases {

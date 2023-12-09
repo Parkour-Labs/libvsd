@@ -82,7 +82,7 @@ pub struct Save {
     /// Skip checking and validation of site certificates.
     #[arg(long, help_heading = "Client Options")]
     pub no_certificate_checks: bool,
-    
+
     /// Set http(s) / socks proxy address for requests.
     #[arg(long, help_heading = "Client Options", value_parser = proxy_address_parser)]
     pub proxy: Option<Proxy>,
@@ -122,7 +122,7 @@ pub struct Save {
     /// Maximum number of retries to download an individual segment.
     #[arg(long, help_heading = "Download Options", default_value_t = 15)]
     pub retry_count: u8,
-    
+
     /// Download streams without merging them.
     /// Note that --output flag is ignored if this flag is used.
     #[arg(long, help_heading = "Download Options")]

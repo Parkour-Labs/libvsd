@@ -103,10 +103,7 @@ pub(super) fn decrypt_aes_128_cbc(
     let key_length = key.len();
 
     if key_length != 16 {
-        bail!(
-            "invalid key size i.e. {} but expected size 16.",
-            key_length
-        );
+        bail!("invalid key size i.e. {} but expected size 16.", key_length);
     }
 
     let mut key_c = [0_u8; 16];

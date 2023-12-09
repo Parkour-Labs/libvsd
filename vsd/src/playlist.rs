@@ -451,12 +451,7 @@ impl MediaPlaylist {
             MediaType::Video => "vsd_video",
         };
 
-        let mut path = PathBuf::from(format!(
-            "{}_{}.{}",
-            prefix,
-            filename.to_string_lossy(),
-            ext
-        ));
+        let mut path = PathBuf::from(format!("{}_{}.{}", prefix, filename.to_string_lossy(), ext));
 
         if let Some(directory) = directory {
             path = directory.join(path);
@@ -660,7 +655,6 @@ pub(crate) struct Key {
     pub(crate) method: KeyMethod,
     pub(crate) uri: Option<String>,
 }
-
 
 #[derive(Clone, Default)]
 pub(crate) struct Segment {
